@@ -19,7 +19,7 @@ export const Projects = () => {
                             "Custom CSS",
                             "Tailwind CSS"
                         ]}
-                        projectRepoURL="https://google.com"
+                        projectRepoURL="https://github.com/willhedgecock/portfolio-site"
                         projectRepoCTA="View Portfolio Code"
                     />
                     <ProjectCard
@@ -34,8 +34,6 @@ export const Projects = () => {
                         ]}
                         projectRepoURL="https://github.com/willhedgecock/react-dictionary"
                         projectRepoCTA="View Dictionary App Code"
-                        projectDemoURL="https://google.com"
-                        projectDemoCTA="View Dictionary App Demo"
                     />
                     <ProjectCard
                         title="Random Password Generator"
@@ -48,8 +46,6 @@ export const Projects = () => {
                         ]}
                         projectRepoURL="https://github.com/willhedgecock/react-pw-generator"
                         projectRepoCTA="View Password Generator Code"
-                        projectDemoURL="https://google.com"
-                        projectDemoCTA="View Password Generator Demo"
                     />
                     <ProjectCard 
                         title="Iowa Association of Track Coaches"
