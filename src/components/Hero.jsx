@@ -1,15 +1,16 @@
 import { Linkedin, Github } from 'lucide-react';
 import { useSprings, animated } from '@react-spring/web';
+import resumePDF from '@/assets/pdf/WillHedgecockResume.pdf'
 
 export const Hero = () => {
     const elements = [
         { type: 'h1', content: 'Will Hedgecock' },
-        { type: 'p', content: 'Front-End Developer' },
+        { type: 'p', content: <span className="text-xl font-bold">Frontend Developer</span> },
         { type: 'p', content: 'I enjoy building performant, responsive, ADA compliant web applications.' },
         { type: 'div', content: (
             <div className="mt-6">
                 <a tabindex="-1" href="#projects"><button className="btn-secondary mr-4">View My Work</button></a>
-                <a tabindex="-1" href="/resume.pdf"><button className="btn-secondary">Download Resume</button></a>
+                <a tabindex="-1" href={resumePDF} target="_blank"><button className="btn-secondary">Download Resume</button></a>
             </div>
         ) },
         { type: 'div', content: (
@@ -31,7 +32,7 @@ export const Hero = () => {
     }));
 
     return (
-        <section id="hero" className="h-[60vh] lg:h-[80vh] flex flex-col justify-center w-full bg-slate-800 text-white mobile-padding">
+        <section id="hero" className="h-[80vh] flex flex-col justify-center w-full bg-slate-800 text-white mobile-padding">
             <div className="inner-container with-borders">
                 {springs.map((style, index) => {
                     const Element = elements[index].type;

@@ -37,7 +37,7 @@ export const Navbar = () => {
     return (
         <nav ref={navbarRef}>
             {/* Desktop Navigation */}
-            <div className={`main-nav md:flex justify-between w-full p-5 bg-mint ${stickyClass}`}>
+            <div className={`main-nav z-300 md:flex justify-between w-full p-5 bg-mint ${stickyClass}`}>
                 <div className="logo uppercase">
                     <a href="/"><span className="font-bold text-xl">Will Hedgecock</span> Portfolio</a>
                 </div>
@@ -71,7 +71,7 @@ export const Navbar = () => {
                 </div>
             </div>
             {/* Mobile Navigation */}
-            <div className={`mobile-nav absolute z-200 ${isMobileMenuOpen ? "w-full bg-purple-dark" : "w-0 overflow-hidden" } transition-all duration-300 ease-in md:hidden`}>
+            <div className={`mobile-nav fixed inset-0 z-200 ${isMobileMenuOpen ? "w-full bg-purple-dark" : "w-0 overflow-hidden"} transition-all duration-300 ease-in md:hidden`}>
                 <div className="nav-items flex gap-7 flex flex-col items-center justify-center min-h-screen">
                     {navItems.map((item, index) => (
                         <a key={index} href={item.href} className="nav-item text-white uppercase text-xl" onClick={() => setIsMobileMenuOpen(false)}>
